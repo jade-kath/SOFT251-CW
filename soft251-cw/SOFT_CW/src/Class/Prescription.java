@@ -14,20 +14,36 @@ import java.util.ArrayList;
 public class Prescription {
     private String Notes;
 
+    /**
+     * Receives Notes
+     * @return
+     */
     public String getNotes() {
         return Notes;
     }
 
+    /**
+     * Sets Notes with a value
+     * @param Notes
+     */
     public void setNotes(String Notes) {
         this.Notes = Notes;
     }
     
     private ArrayList<Medicine>medication = new ArrayList();
 
+    /**
+     * Receives the Medication for the Prescription
+     * @return
+     */
     public ArrayList<Medicine> getMedication() {
         return medication;
     }
 
+    /**
+     * Set the value of a Medication
+     * @param medication
+     */
     public void setMedication(ArrayList<Medicine> medication) {
         this.medication = medication;
     }
