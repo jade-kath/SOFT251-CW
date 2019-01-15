@@ -5,13 +5,14 @@
  */
 package Class;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author jade_
  */
-public class Prescription {
+public class Prescription implements Serializable {
     private String Notes;
 
     /**

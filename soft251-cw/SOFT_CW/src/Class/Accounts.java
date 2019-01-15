@@ -5,16 +5,27 @@
  */
 package Class;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author jade_
  */
-public class Accounts {
+public class Accounts implements Serializable {
     
    private ArrayList<Administrator>admin = new ArrayList();
-
+   private ArrayList<Secretary>secretary = new ArrayList();
+   private ArrayList<Doctor>doctor = new ArrayList();
+   private ArrayList<Patient>patient = new ArrayList();
+   private Stock stock = new Stock();
+   
     /**
      * Retrieves Administrator data from the Array
      * @return administrator
@@ -29,10 +40,7 @@ public class Accounts {
      */
     public void setAdmin(ArrayList<Administrator> admin) {
         this.admin = admin;
-    }
-   
-    
-   private ArrayList<Secretary>secretary = new ArrayList();
+    }   
 
     /**
      * Retrieves Secretary data from the Array
@@ -48,10 +56,7 @@ public class Accounts {
      */
     public void setSecretary(ArrayList<Secretary> secretary) {
         this.secretary = secretary;
-    }
-   
-   
-   private ArrayList<Doctor>doctor = new ArrayList();
+    }   
 
     /**
      * Retrieves Doctor data from the Array
@@ -68,9 +73,6 @@ public class Accounts {
     public void setDoctor(ArrayList<Doctor> doctor) {
         this.doctor = doctor;
     }
-   
-   
-   private ArrayList<Patient>patient = new ArrayList();
 
     /**
      * Retrieves Patient data from the Array
@@ -87,23 +89,56 @@ public class Accounts {
     public void setPatient(ArrayList<Patient> patient) {
         this.patient = patient;
     }
-   
-    private ArrayList<Stock>stock = new ArrayList();
 
     /**
-     * Retrieves Stock data from the Array
+     * Retrieves the class
      * @return
      */
-    public ArrayList<Stock> getStock() {
+    public Stock getStock() {
         return stock;
     }
 
     /**
-     * Sets the value to Stock
+     * Sets the values within the class
      * @param stock
      */
-    public void setStock(ArrayList<Stock> stock) {
+    public void setStock(Stock stock) {
         this.stock = stock;
     }
     
+    public void writeFile() throws IOException {
+        ObjectOutputStream oos = null;
+        FileOutputStream fout = null;
+        
+        try {
+            fout = new FileOutputStream("Z:\\Computing - Stage 2\\Module 3 SOFT251 - Object-orientated Programming (Java)\\soft251-cw\\DataFile.txt");
+            oos = new ObjectOutputStream(fout);
+            oos.writeObject(this);
+            oos.close();
+            fout.close();
+            
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    } 
+    
+    public Accounts readFile() throws IOException {
+        ObjectInputStream objectinputstream = null;
+        Accounts accounts = new Accounts();
+        try{
+            FileInputStream streamIn = new FileInputStream("Z:\\Computing - Stage 2\\Module 3 SOFT251 - Object-orientated Programming (Java)\\soft251-cw\\DataFile.txt");
+            objectinputstream = new ObjectInputStream(streamIn);
+            Accounts account = (Accounts)objectinputstream.readObject();
+            accounts = account;
+            streamIn.close();
+            objectinputstream.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return accounts;
+    }
+
 }

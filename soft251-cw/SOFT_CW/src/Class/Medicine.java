@@ -5,11 +5,13 @@
  */
 package Class;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jade_
  */
-public class Medicine {
+public class Medicine implements Serializable {
    private String MedicationName;
    private String Dosage;
    private int PrescriptionQty;

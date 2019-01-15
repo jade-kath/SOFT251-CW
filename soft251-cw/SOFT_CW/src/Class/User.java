@@ -5,11 +5,15 @@
  */
 package Class;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 /**
  *
  * @author jade_
  */
-public class User {
+public class User implements Serializable {
     private String FirstName;
     private String Surname;
     private String AddressLineOne;

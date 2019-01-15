@@ -5,13 +5,14 @@
  */
 package Class;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author jade_
  */
-public class Doctor extends User {
+public class Doctor extends User implements Serializable {
     
     private ArrayList<Rating>rating = new ArrayList();
 

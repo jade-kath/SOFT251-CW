@@ -5,11 +5,13 @@
  */
 package Class;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jade_
  */
-public class Rating {
+public class Rating implements Serializable {
    private int Rating;
    private String Feedback;
 

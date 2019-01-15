@@ -5,10 +5,12 @@
  */
 package Class;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jade_
  */
-public class Secretary extends User {
+public class Secretary extends User implements Serializable {
     
 }
