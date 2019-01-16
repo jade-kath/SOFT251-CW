@@ -106,12 +106,16 @@ public class Accounts implements Serializable {
         this.stock = stock;
     }
     
+    /**
+     * writes an object to a file
+     * @throws IOException
+     */
     public void writeFile() throws IOException {
         ObjectOutputStream oos = null;
         FileOutputStream fout = null;
         
         try {
-            fout = new FileOutputStream("Z:\\Computing - Stage 2\\Module 3 SOFT251 - Object-orientated Programming (Java)\\soft251-cw\\DataFile.txt");
+            fout = new FileOutputStream("Z:\\Computing - Stage 2\\Module 3 SOFT251 - Object-orientated Programming (Java)\\soft251-cw\\DataFile.ser");
             oos = new ObjectOutputStream(fout);
             oos.writeObject(this);
             oos.close();
@@ -124,11 +128,16 @@ public class Accounts implements Serializable {
 
     } 
     
+    /**
+     * Reads what's written on the file to the accounts file
+     * @return
+     * @throws IOException
+     */
     public Accounts readFile() throws IOException {
         ObjectInputStream objectinputstream = null;
         Accounts accounts = new Accounts();
         try{
-            FileInputStream streamIn = new FileInputStream("Z:\\Computing - Stage 2\\Module 3 SOFT251 - Object-orientated Programming (Java)\\soft251-cw\\DataFile.txt");
+            FileInputStream streamIn = new FileInputStream("Z:\\Computing - Stage 2\\Module 3 SOFT251 - Object-orientated Programming (Java)\\soft251-cw\\DataFile.ser");
             objectinputstream = new ObjectInputStream(streamIn);
             Accounts account = (Accounts)objectinputstream.readObject();
             accounts = account;

@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/Computing%20-%20Stage%202/Module%203%20SOFT251%20-%20Object-orientated%20Programming%20(Java)/soft251-cw/SOFT251GUI/web/index.html</file>
+            <file>file:/Z:/Computing%20-%20Stage%202/Module%203%20SOFT251%20-%20Object-orientated%20Programming%20(Java)/soft251-cw/SOFT251GUI/web/adminUserPage.jsp</file>
+            <file>file:/Z:/Computing%20-%20Stage%202/Module%203%20SOFT251%20-%20Object-orientated%20Programming%20(Java)/soft251-cw/SOFT251GUI/src/java/Servlets/CreateAccount.java</file>
+            <file>file:/Z:/Computing%20-%20Stage%202/Module%203%20SOFT251%20-%20Object-orientated%20Programming%20(Java)/soft251-cw/SOFT251GUI/src/java/Servlets/Login.java</file>
+            <file>file:/Z:/Computing%20-%20Stage%202/Module%203%20SOFT251%20-%20Object-orientated%20Programming%20(Java)/soft251-cw/SOFT251GUI/web/userPage.jsp</file>
+            <file>file:/Z:/Computing%20-%20Stage%202/Module%203%20SOFT251%20-%20Object-orientated%20Programming%20(Java)/soft251-cw/SOFT251GUI/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

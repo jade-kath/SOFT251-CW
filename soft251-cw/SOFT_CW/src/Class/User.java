@@ -20,6 +20,7 @@ public class User implements Serializable {
     private String AddressLineTwo;
     private String PostCode;
     private String IDNum;
+    private String Password;
     
     /**
      * Receives the First Name
@@ -116,6 +117,23 @@ public class User implements Serializable {
     public void setIDNum(String IDNum) {
         this.IDNum = IDNum;
     }
+
+    /**
+     * Receives Users Password
+     * @return
+     */
+    public String getPassword() {
+        return Password;
+    }
+
+    /**
+     * Sets the Password to a value
+     * @param Password
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+    
     
     
 }
